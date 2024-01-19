@@ -1,24 +1,14 @@
-//
-//  ContentView.swift
-//  TestSwiftUi
-//
-//  Created by Yvgen Troshchiy on 17.01.2024.
-//
-
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        SuccessIndicatorView {
+            print("onViewTap")
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView ()
 }

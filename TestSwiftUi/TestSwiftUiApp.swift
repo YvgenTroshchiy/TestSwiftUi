@@ -12,5 +12,5 @@ struct TestSwiftUiApp: App {
 }
 
 struct MyLogger {
-    static let logger = Logger(subsystem: "com.troshchiy", category: "test app")
+    static let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "test app")
 }

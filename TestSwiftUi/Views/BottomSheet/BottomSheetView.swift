@@ -17,21 +17,27 @@ struct BottomSheetView: View {
 
     var body: some View {
         let items = [
-            Item( name: "4r5t3t"),
-            Item( name: "AAA"),
-            Item( name: "sdfg"),
-            Item( name: "CCC"),
-            Item( name: "4r5t3t"),
-            Item( name: "311"),
-            Item( name: "222"),
-            Item( name: "sdfg")
+            Item( name: "James"),
+            Item( name: "Robert"),
+            Item( name: "John"),
+            Item( name: "Michael"),
+            Item( name: "David"),
+            Item( name: "William"),
+            Item( name: "Richard"),
+            Item( name: "Joseph"),
+            Item( name: "Thomas"),
+            Item( name: "Christopher"),
+            Item( name: "Charles"),
+            Item( name: "Daniel"),
+            Item( name: "Matthew"),
+            Item( name: "Anthony"),
+            Item( name: "Mark")
         ]
 
         Button("Display bottom sheet") {
             sheetShown.toggle()
         }
         .sheet(isPresented: $sheetShown) {
-            NavigationStack {
                 VStack(){
                     Button(action: {
                         sheetShown.toggle()
@@ -54,11 +60,8 @@ struct BottomSheetView: View {
                     .containerShape(Rectangle())
                     //                .listRowBackground(Color.white)
                     //                .navigationTitle("Title")
-
-                    .presentationDetents([.medium])
                 }
-            }
-        }
+        }.presentationDetents([.medium])
     }
 }
 

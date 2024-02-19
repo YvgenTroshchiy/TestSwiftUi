@@ -23,7 +23,8 @@ class ViewModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
 
     init() {
-        $text.debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // RunLoop.main
+        $text.dropFirst()
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // RunLoop.main
             .sink(receiveValue: { [weak self] text in
                 self?.error = self?.validate(text) ?? .empty
                 print("text: \(text)")

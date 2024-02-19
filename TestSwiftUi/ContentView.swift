@@ -3,13 +3,19 @@ import UIKit
 
 struct ContentView: View {
 
+    @State var text: String = ""
+//    @State var error: String = "from $1 to $150 at once"
+    @State var error: String = ""
+
     var body: some View {
-        VStack{
+        VStack(spacing: 16) {
             SuccessIndicatorView {
                 MyLogger.logger.debug("SI View")
             }
             ConfirmRow()
             BottomSheetView()
+            MyTextField(title: "Withdrawal amount", description: "from $1 to $150 at once", hint: "$0", text: $text, error: $error)
+            MyTextField(title: "Withdrawal amount", description: .empty, hint: "$0", text: $text, error: $error)
         }
     }
 }
@@ -17,3 +23,4 @@ struct ContentView: View {
 #Preview {
     ContentView ()
 }
+

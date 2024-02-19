@@ -2,17 +2,15 @@ import Foundation
 import SwiftUI
 import UIKit
 
-import Foundation
-
 struct MyTextField: View {
     var title: String = ""
     var description: String = ""
     var hint: String = ""
     @Binding var text: String
-    @Binding var error: String
+    var error: String
 
-    var normalColor:Color =  .black
-    var errorColor:Color = .red
+    var normalColor: Color =  .black
+    var errorColor: Color = .red
     
     var body: some View {
         let color = error.isEmpty ? normalColor : errorColor
@@ -45,28 +43,28 @@ struct MyTextField: View {
 }
 
 #Preview("Hint Description") {
-    MyTextField (title: "Withdrawal amount",
+    MyTextField(title: "Withdrawal amount",
                  description: "from $1 to $150 at once",
                  hint: "$0",
-                 text: .constant("") ,
-                 error: .constant(.empty)
+                 text: .constant(""),
+                 error: .empty
     )
 }
 
 #Preview("Hint No Description") {
-    MyTextField (title: "Withdrawal amount",
+    MyTextField(title: "Withdrawal amount",
                  description: .empty,
                  hint: "$0",
-                 text: .constant("") ,
-                 error: .constant(.empty)
+                 text: .constant(""),
+                 error: .empty
     )
 }
 
 #Preview("Error") {
-    MyTextField (title: "Withdrawal amount",
+    MyTextField(title: "Withdrawal amount",
                  description: .empty,
                  hint: "$0",
-                 text: .constant("$250") ,
-                 error: .constant("Error text with description what was wrong")
+                 text: .constant("$250"),
+                 error: "Error text with description what was wrong"
     )
 }

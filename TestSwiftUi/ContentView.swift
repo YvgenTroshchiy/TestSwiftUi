@@ -14,18 +14,22 @@ struct ContentView: View {
             SuccessIndicatorView {
                 MyLogger.logger.debug("SI View")
             }
+
             ConfirmRow()
+
             BottomSheetView()
+
             MyTextField(title: "Withdrawal amount",
                         description: "from $1 to $150 at once",
                         hint: "$0",
-                        text: $viewModel.text,
-                        error: $viewModel.error)
-//            MyTextField(title: "Withdrawal amount",
-//                        description: .empty,
-//                        hint: "$0",
-//                        text: $viewModel.text,
-//                        error: $viewModel.error)
+                        text: $viewModel.cardholdersName,
+                        error: viewModel.cardholdersNameError)
+
+            MyTextField(title: "Withdrawal amount",
+                        description: .empty,
+                        hint: "$0",
+                        text: $viewModel.cardholdersName,
+                        error: viewModel.cardholdersNameError)
         }
     }
 }
@@ -33,4 +37,3 @@ struct ContentView: View {
 #Preview {
     ContentView ()
 }
-

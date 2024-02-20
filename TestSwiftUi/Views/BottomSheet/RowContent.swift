@@ -6,7 +6,7 @@ struct RowContent: View {
     let name : String
     
     var body: some View {
-        HStack () {
+        HStack {
             Text(name).padding(.leading, 16)
             Spacer()
             Image("success")

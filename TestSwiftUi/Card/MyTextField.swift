@@ -9,7 +9,7 @@ struct MyTextField: View {
     @Binding var text: String
     var error: String
 
-    var normalColor: Color =  .black
+    var normalColor: Color = .black
     var errorColor: Color = .red
     
     var body: some View {

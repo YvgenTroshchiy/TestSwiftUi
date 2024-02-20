@@ -3,7 +3,6 @@ import SwiftUI
 import UIKit
 
 struct SuccessIndicatorView: View {
-
     let onViewTap: () -> Void
 
     var body: some View {

@@ -8,21 +8,25 @@ class ViewModel: ObservableObject {
     @Published var cardholdersName = ""
     @Published var cardholdersSurname = ""
 
-    var withdrawalAmountError = ""
-    var cardNumberError = ""
-    var cardholdersNameError = ""
-    var cardholdersSurnameError = ""
-
-    private let cardHolderValidator = CardHolderValidator()
+    @Published var withdrawalAmountError = ""
+    @Published var cardNumberError = ""
+    @Published var cardholdersNameError = ""
+    @Published var cardholdersSurnameError = ""
 
     private var bag = Set<AnyCancellable>()
 
+    private let cardHolderValidator = CardHolderValidator()
+
     init() {
         $cardholdersName.dropFirst()
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // RunLoop.main
             .sink(receiveValue: { [weak self] name in
-                self?.cardholdersNameError = self?.validateCardholdersName(name) ?? .empty
-                print("$cardholdersName: \(name)")
+                self?.cardholdersNameError = self?.cardHolderValidator.validate(name) ?? .empty
+            })
+            .store(in: &bag)
+
+        $cardholdersSurname.dropFirst()
+            .sink(receiveValue: { [weak self] surname in
+                self?.cardholdersSurnameError = self?.cardHolderValidator.validate(surname) ?? .empty
             })
             .store(in: &bag)
     }

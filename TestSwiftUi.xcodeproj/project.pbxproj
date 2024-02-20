@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700A11B12B84E62900A5D3AA /* CardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A11B02B84E62900A5D3AA /* CardScreen.swift */; };
 		7037DCE42B7BA2AA005F4A3A /* ConfirmRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7037DCE32B7BA2AA005F4A3A /* ConfirmRow.swift */; };
-		705E084F2B7E107F00A8428F /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 705E084E2B7E107F00A8428F /* home.png */; };
-		705E08512B7E108B00A8428F /* sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 705E08502B7E108B00A8428F /* sheet.png */; };
 		708BCBA72B8362FA001EDBEA /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BCBA62B8362FA001EDBEA /* MyTextField.swift */; };
 		708BCBAC2B836DA5001EDBEA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BCBAB2B836DA5001EDBEA /* String+Extension.swift */; };
 		708BCBAE2B837AAA001EDBEA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BCBAD2B837AAA001EDBEA /* ViewModel.swift */; };
@@ -28,10 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700A11B02B84E62900A5D3AA /* CardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScreen.swift; sourceTree = "<group>"; };
 		7037DCE32B7BA2AA005F4A3A /* ConfirmRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRow.swift; sourceTree = "<group>"; };
 		705E08472B7E0EE700A8428F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		705E084E2B7E107F00A8428F /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../../../Desktop/home.png; sourceTree = "<group>"; };
-		705E08502B7E108B00A8428F /* sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sheet.png; path = ../../../../../../Desktop/sheet.png; sourceTree = "<group>"; };
 		708BCBA62B8362FA001EDBEA /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		708BCBAB2B836DA5001EDBEA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		708BCBAD2B837AAA001EDBEA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -61,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700A11B32B84ECF100A5D3AA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				708BCBAB2B836DA5001EDBEA /* String+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		705E08452B7E0BE800A8428F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +89,6 @@
 		705E084D2B7E106500A8428F /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				705E08502B7E108B00A8428F /* sheet.png */,
-				705E084E2B7E107F00A8428F /* home.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -94,6 +98,7 @@
 			children = (
 				708BCBB62B839157001EDBEA /* Validators */,
 				708BCBA62B8362FA001EDBEA /* MyTextField.swift */,
+				700A11B02B84E62900A5D3AA /* CardScreen.swift */,
 				708BCBAD2B837AAA001EDBEA /* ViewModel.swift */,
 			);
 			path = Card;
@@ -134,11 +139,11 @@
 			children = (
 				708BCBAF2B838E36001EDBEA /* Card */,
 				705E08452B7E0BE800A8428F /* Views */,
+				700A11B32B84ECF100A5D3AA /* Utils */,
 				70E4906C2B57E5F7001A1CED /* TestSwiftUiApp.swift */,
 				70E4906E2B57E5F7001A1CED /* ContentView.swift */,
 				70E490702B57E5F8001A1CED /* Assets.xcassets */,
 				70E490722B57E5F8001A1CED /* Preview Content */,
-				708BCBAB2B836DA5001EDBEA /* String+Extension.swift */,
 			);
 			path = TestSwiftUi;
 			sourceTree = "<group>";
@@ -210,9 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E490742B57E5F8001A1CED /* Preview Assets.xcassets in Resources */,
-				705E08512B7E108B00A8428F /* sheet.png in Resources */,
 				70E490712B57E5F8001A1CED /* Assets.xcassets in Resources */,
-				705E084F2B7E107F00A8428F /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +228,7 @@
 			files = (
 				708BCBB12B838E51001EDBEA /* CardHolderValidator.swift in Sources */,
 				708BCBB52B839102001EDBEA /* CardNumberValidator.swift in Sources */,
+				700A11B12B84E62900A5D3AA /* CardScreen.swift in Sources */,
 				70AF63542B7BBA9B000C40F0 /* BottomSheetView.swift in Sources */,
 				708BCBB32B8390EF001EDBEA /* CardScheme.swift in Sources */,
 				708BCBAE2B837AAA001EDBEA /* ViewModel.swift in Sources */,

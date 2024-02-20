@@ -3,7 +3,6 @@ import SwiftUI
 import UIKit
 
 struct ConfirmRow: View {
-
     @State private var showingAlert = false
 
     var body: some View {

@@ -61,7 +61,7 @@ struct BottomSheetView: View {
                     //                .listRowBackground(Color.white)
                     //                .navigationTitle("Title")
                 }
-        }.presentationDetents([.medium])
+        }.presentationDetents([.medium, .large])
     }
 }
 

@@ -1,5 +1,12 @@
 import SwiftUI
 
+enum FocusElement: Hashable {
+    case amount
+    case card
+    case name
+    case sureName
+}
+
 struct CardScreen: View {
     @ObservedObject var viewModel = ViewModel()
 
@@ -10,6 +17,7 @@ struct CardScreen: View {
                         hint: "$0",
                         text: $viewModel.withdrawalAmount,
                         error: viewModel.withdrawalAmountError)
+            .padding(.top, 16)
 
             MyTextField(title: "Withdrawal amount",
                         description: .empty,
@@ -28,7 +36,26 @@ struct CardScreen: View {
                         hint: "$0",
                         text: $viewModel.cardholdersSurname,
                         error: viewModel.cardholdersSurnameError)
+
+            Button {
+                print("Review & Confirm")
+            } label: {
+                HStack {
+                    Spacer()
+                    Text("Review & Confirm")
+                        .foregroundStyle(.black)
+                        .font(.system(size: 16, weight: .regular))
+                        .padding(14)
+                    Spacer()
+                }
+            }
+            .buttonStyle(.plain)
+            .background(.orange)
+            .cornerRadius(8)
+            .padding(.top, 16)
+            .padding(.horizontal, 24)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .navigationTitle("Card")
     }
 }

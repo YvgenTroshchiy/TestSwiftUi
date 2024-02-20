@@ -38,7 +38,7 @@ struct MyTextField: View {
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 0)
-        .background(Color.gray)
+//        .background(Color.gray)
     }
 }
 
